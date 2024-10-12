@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="icono.jpg" type="image/jpeg">
+
+    <!-- Incluir Google Fonts para íconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Barra amarilla superior */
+        .top-bar {
+            width: 100%;
+            height: 60px;
+            background-color: #FFFF00;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            justify-content: space-between;
+        }
+
+        /* Logo */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: 47%;
+            transform: translateX(-50%);
+        }
+
+        .logo-container img {
+            width: 157.82px;
+            height: 68.22px;
+        }
+
+        /* Barra de búsqueda moderna */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 5px 15px;
+            width: 300px;
+            transition: box-shadow 0.3s, border-color 0.3s;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .search-bar input::placeholder {
+            color: #999;
+        }
+
+        .search-bar:focus-within {
+            box-shadow: 0 4px 8px rgba(128, 0, 128, 0.4);
+            border: 2px solid #800080;
+        }
+
+        /* Información del usuario en la esquina derecha */
+        .user-info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: #333;
+            max-width: 300px;
+            text-align: right;
+            overflow: hidden;
+            margin-left: auto;
+            margin-top: 5px;
+            padding-right: 40px;
+        }
+
+        .user-info div {
+            line-height: 1.2;
+        }
+
+        .user-info .position {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .user-info .name {
+            font-size: 14px;
+            font-weight: normal;
+            color: #777;
+            margin: 0;
+        }
+
+        .user-info .email {
+            font-size: 12px;
+            font-weight: normal;
+            color: #555;
+            margin: 0;
+        }
+
+        /* Estilo del ícono de usuario */
+        .user-icon {
+            margin-left: 10px;
+            color: #333;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #FFFF00;
+            overflow: hidden;
+            border: 2px solid #333;
+        }
+
+        .user-icon svg {
+            width: 70%;
+            height: 70%;
+        }
+
+        /* Barra gris vertical */
+        .vertical-bar {
+            width: 2px;
+            height: 30px;
+            background-color: #888;
+            margin: 0 10px;
+        }
+
+        /* Estilo del botón "Nueva Solicitud" */
+        .new-request-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #800080; /* Fondo morado */
+    color: white;
+    border: 2px solid #800080; 
+    padding: 8px 16px; /* Reducir el tamaño del botón */
+    font-size: 14px; /* Disminuir el tamaño de la fuente */
+    border-radius: 15px; /* Bordes ligeramente más pequeños */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: absolute;
+    top: 100px;
+    right: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+        .new-request-btn i {
+            margin-right: 10px;
+        }
+
+        .new-request-btn:hover {
+            background-color: #800080; /* Cambiar color al pasar el cursor */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Barra superior amarilla -->
+    <div class="top-bar">
+        <!-- Sección del logo -->
+        <div class="logo-container">
+            <img src="logo2.png" alt="Logo" class="logo">
+        </div>
+
+        <!-- Barra de búsqueda -->
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+        </div>
+
+        <!-- Información del usuario en la esquina derecha -->
+        <div class="user-info">
+            <div>
+                <p class="position">Analista de TI</p>
+                <p class="name">Juan Pérez</p>
+                <p class="email">juan.perez@ejemplo.com</p>
+            </div>
+            <div class="vertical-bar"></div>
+            <div class="user-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón Nueva Solicitud debajo de la barra amarilla -->
+    <button class="new-request-btn">
+        <i class="material-icons">add_circle</i> Nueva Solicitud
+    </button>
+
+<!-- Botón Nueva Solicitud debajo de la barra amarilla -->
+<button class="new-request-btn" onclick="window.location.href='solicitudes.html'">
+    <i class="material-icons">add_circle</i> Nueva Solicitud
+</button>
+
+
+</body>
+</html>
